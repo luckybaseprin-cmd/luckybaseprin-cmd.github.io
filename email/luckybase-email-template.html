@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="x-apple-disable-message-reformatting">
+<title>LuckyBase | Email</title>
+<style>
+  body{
+    margin:0;
+    padding:0;
+    background:#f4f6fb;
+    font-family:Arial,Helvetica,sans-serif;
+    color:#0f172a;
+  }
+  table{
+    border-collapse:collapse;
+  }
+  img{
+    border:0;
+    display:block;
+    line-height:0;
+  }
+  .container{
+    width:100%;
+    background:#f4f6fb;
+    padding:24px 0;
+  }
+  .card{
+    width:100%;
+    max-width:600px;
+    background:#ffffff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(15,23,42,0.08);
+  }
+  .header{
+    background:linear-gradient(135deg,#0b1b3a,#1546b3 55%,#1f6bff);
+    color:#ffffff;
+    padding:28px 32px 24px;
+  }
+  .logo{
+    width:160px;
+    height:auto;
+    display:block;
+  }
+  .header h1{
+    margin:16px 0 0;
+    font-size:20px;
+    letter-spacing:0.2px;
+  }
+  .subheader{
+    margin-top:8px;
+    font-size:14px;
+    color:rgba(255,255,255,0.75);
+  }
+  .content{
+    padding:28px 32px 18px;
+  }
+  .content h2{
+    margin:0 0 12px;
+    font-size:20px;
+  }
+  .content p{
+    margin:0 0 14px;
+    line-height:1.6;
+    color:#334155;
+    font-size:15px;
+  }
+  .cta-wrap{
+    padding:6px 32px 24px;
+  }
+  .cta{
+    display:inline-block;
+    background:#1565ff;
+    color:#ffffff;
+    text-decoration:none;
+    padding:12px 20px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:14px;
+    box-shadow:0 12px 26px rgba(21,101,255,0.28);
+  }
+  .info-box{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:16px;
+    margin-top:16px;
+  }
+  .info-box p{
+    margin:0 0 8px;
+    font-size:14px;
+    color:#475569;
+  }
+  .footer{
+    padding:22px 32px 28px;
+    font-size:12px;
+    color:#64748b;
+    line-height:1.5;
+  }
+  .footer a{
+    color:#1565ff;
+    text-decoration:none;
+  }
+  .divider{
+    height:1px;
+    background:#e2e8f0;
+    margin:0 32px;
+  }
+  .preheader{
+    display:none;
+    font-size:1px;
+    line-height:1px;
+    max-height:0;
+    max-width:0;
+    opacity:0;
+    overflow:hidden;
+  }
+  @media only screen and (max-width:640px){
+    .header,
+    .content,
+    .cta-wrap,
+    .footer{
+      padding-left:20px;
+      padding-right:20px;
+    }
+  }
+</style>
+</head>
+<body>
+<span class="preheader">{{preheader}}</span>
+<table role="presentation" class="container" width="100%">
+  <tr>
+    <td align="center">
+      <table role="presentation" class="card" width="600">
+        <tr>
+          <td class="header">
+            <img class="logo" src="https://luckybase.es/LUCKYBASE%20logo%20letras.png" alt="LuckyBase">
+            <h1>Resumen personalizado</h1>
+            <div class="subheader">{{asunto}}</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="content">
+            <h2>Hola {{nombre}},</h2>
+            <p>{{mensaje_principal}}</p>
+            <p>{{mensaje_secundario}}</p>
+
+            <div class="info-box">
+              <p><strong>Plan recomendado:</strong> {{plan_recomendado}}</p>
+              <p><strong>Objetivo:</strong> {{objetivo}}</p>
+              <p><strong>Plazo estimado:</strong> {{plazo_estimado}}</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="cta-wrap">
+            <a class="cta" href="{{cta_url}}" target="_blank" rel="noopener">{{cta_texto}}</a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="divider"></div>
+          </td>
+        </tr>
+        <tr>
+          <td class="footer">
+            <p>Si no solicitaste esta comunicación, puedes ignorarla.</p>
+            <p>Contacto: <a href="mailto:contacto@luckybase.es">contacto@luckybase.es</a></p>
+            <p>© 2026 LuckyBase. Todos los derechos reservados.</p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
